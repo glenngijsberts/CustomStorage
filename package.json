@@ -1,0 +1,23 @@
+{
+  "name": "customstorage",
+  "version": "1.0.0",
+  "description": "Wrapper around localStorage API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glenngijsberts/CustomStorage.git"
+  },
+  "keywords": [
+    "javascript",
+    "localStorage"
+  ],
+  "author": "Glenn Gijsberts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glenngijsberts/CustomStorage/issues"
+  },
+  "homepage": "https://github.com/glenngijsberts/CustomStorage#readme"
+}
