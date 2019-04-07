@@ -23,8 +23,9 @@
   },
   "homepage": "https://github.com/glenngijsberts/CustomStorage#readme",
   "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
-    "babel-cli": "^6.26.0",
     "eslint": "^5.16.0"
   },
   "dependencies": {}
