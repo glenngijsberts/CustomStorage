@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint",
-    "test": "npm run test",
+    "test": "jest",
     "build": "babel ./src/CustomStorage.js --out-file ./index.js"
   },
   "repository": {
@@ -26,7 +26,8 @@
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
-    "eslint": "^5.16.0"
+    "eslint": "^5.16.0",
+    "jest": "^24.7.1"
   },
   "dependencies": {}
 }
