@@ -1,7 +1,7 @@
 {
-  "name": "customstorage",
+  "name": "@glenngijsberts/customstorage",
   "version": "1.0.0",
-  "description": "Wrapper around localStorage API",
+  "description": "Wrapper for localStorage API",
   "main": "index.js",
   "scripts": {
     "lint": "eslint",
