@@ -14,7 +14,9 @@
   },
   "keywords": [
     "javascript",
-    "localStorage"
+    "localStorage",
+    "jest",
+    "babel"
   ],
   "author": "Glenn Gijsberts",
   "license": "MIT",
