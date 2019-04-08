@@ -10,7 +10,7 @@ npm install @glenngijsberts/customstorage --save
 ```
 
 ```javascript
-import CustomStorage from 'customstorage';
+import CustomStorage from '@glenngijsberts/customstorage';
 ```
 
 ## Usage
