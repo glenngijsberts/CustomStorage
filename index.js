@@ -21,7 +21,13 @@ function () {
   _createClass(CustomStorage, [{
     key: "get",
     value: function get(key) {
-      var cached = JSON.parse(localStorage.getItem(key));
+      var item = localStorage.getItem(key);
+
+      if (typeof item === 'undefined' || item === null) {
+        return null;
+      }
+
+      var cached = JSON.parse(item);
 
       if (!cached) {
         return null;

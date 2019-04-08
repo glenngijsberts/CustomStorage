@@ -1,6 +1,12 @@
 class CustomStorage {
     get(key) {
-        const cached = JSON.parse(localStorage.getItem(key));
+        const item = localStorage.getItem(key);
+
+        if (typeof item === 'undefined' || item === null) {
+            return null;
+        }
+
+        const cached = JSON.parse(item);
 
         if (!cached) {
             return null;
