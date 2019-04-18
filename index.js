@@ -11,9 +11,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var CustomStorage =
-/*#__PURE__*/
-function () {
+var CustomStorage = function () {
   function CustomStorage() {
     _classCallCheck(this, CustomStorage);
   }
@@ -27,20 +25,20 @@ function () {
         return null;
       }
 
-      var cached = JSON.parse(item);
+      var parsedItem = JSON.parse(item);
 
-      if (!cached) {
+      if (!parsedItem) {
         return null;
       }
 
-      var expires = new Date(cached.expires);
+      var expires = new Date(parsedItem.expires);
 
       if (expires < new Date()) {
         localStorage.removeItem(key);
         return null;
       }
 
-      return cached.value;
+      return parsedItem.value;
     }
   }, {
     key: "set",

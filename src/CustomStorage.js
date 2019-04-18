@@ -1,4 +1,10 @@
 class CustomStorage {
+    /*
+        Get method. Will get an item from
+        the localStorage by key. It will check for
+        null and undefined, and if the item is expired.
+        If not, it will return the value of the given key.
+    */
     get(key) {
         const item = localStorage.getItem(key);
 
@@ -6,22 +12,27 @@ class CustomStorage {
             return null;
         }
 
-        const cached = JSON.parse(item);
+        const parsedItem = JSON.parse(item);
 
-        if (!cached) {
+        if (!parsedItem) {
             return null;
         }
 
-        const expires = new Date(cached.expires);
+        const expires = new Date(parsedItem.expires);
 
         if (expires < new Date()) {
             localStorage.removeItem(key);
             return null;
         }
 
-        return cached.value;
+        return parsedItem.value;
     }
 
+    /*
+        Set method. It will let you set an item
+        with a key and value. It will also allow
+        you to set a lifetime for the item (in minutes).
+    */
     set(key, value, timeInMinutes) {
         const currentTime = new Date().getTime();
 
@@ -30,10 +41,18 @@ class CustomStorage {
         localStorage.setItem(key, JSON.stringify({ value, expires }));
     }
 
+    /*
+        Remove method. Remove an item by
+        key from localStorage.
+    */
     remove(key) {
         localStorage.removeItem(key);
     }
 
+    /*
+        Clear method. Remove everything
+        from your localStorage.
+    */
     clear() {
         localStorage.clear();
     }
