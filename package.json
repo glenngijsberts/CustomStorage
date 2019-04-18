@@ -1,6 +1,6 @@
 {
   "name": "@glenngijsberts/customstorage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper for localStorage API",
   "main": "index.js",
   "scripts": {
