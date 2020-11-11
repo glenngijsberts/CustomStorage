@@ -10,7 +10,7 @@ npm install @glenngijsberts/customstorage --save
 ```
 
 ```javascript
-import CustomStorage from '@glenngijsberts/customstorage';
+import CustomStorage from '@glenngijsberts/customstorage'
 ```
 
 ## Usage
@@ -19,38 +19,39 @@ import CustomStorage from '@glenngijsberts/customstorage';
 /*
     get item
 */
-const token = CustomStorage.get('token');
+const token = CustomStorage.get('token')
 
 /*
     set: token, value, cachetime
 */
-const token = 'AABB12';
-CustomStorage.set('token', token, 60);
+const token = 'AABB12'
+CustomStorage.set('token', token, 60)
 
 /*
     remove item
 */
-CustomStorage.remove('token');
+CustomStorage.remove('token')
 
 /*
     clear storage (all items)
 */
-CustomStorage.clear();
+CustomStorage.clear()
 ```
 
 ## Clone
+
 ```shell
 # clone the repo
 git clone https://github.com/glenngijsberts/CustomStorage.git
 
-# install dependencies
-npm install
+# install dependencies / or npm install
+yarn
 
-# tests
-npm run test
+# tests / or npm run test
+yarn test
 
-# build
-npm run build
+# build / or npm run prepare
+yarn prepare
 ```
 
 ## Contribution
@@ -60,4 +61,3 @@ Feel free to contribute to this package. If you have any questions you can reach
 ## License
 
 MIT
-

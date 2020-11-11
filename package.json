@@ -1,35 +1,57 @@
 {
-  "name": "@glenngijsberts/customstorage",
-  "version": "1.0.2",
-  "description": "Wrapper for localStorage API",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint",
-    "test": "jest",
-    "build": "babel ./src/CustomStorage.js --out-file ./index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/glenngijsberts/CustomStorage.git"
-  },
-  "keywords": [
-    "javascript",
-    "localStorage",
-    "jest",
-    "babel"
-  ],
-  "author": "Glenn Gijsberts",
+  "version": "2.0.0",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/glenngijsberts/CustomStorage/issues"
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
   },
-  "homepage": "https://github.com/glenngijsberts/CustomStorage#readme",
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "arrowParens": "avoid",
+    "trailingComma": "es5"
+  },
+  "name": "@glenngijsberts/customstorage",
+  "author": "Glenn Gijsberts",
+  "module": "dist/customstorage.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/customstorage.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/customstorage.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "eslint": "^5.16.0",
-    "jest": "^24.7.1"
-  },
-  "dependencies": {}
+    "@size-limit/preset-small-lib": "^4.7.0",
+    "husky": "^4.3.0",
+    "size-limit": "^4.7.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.5"
+  }
 }
